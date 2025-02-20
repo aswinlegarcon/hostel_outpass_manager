@@ -1,0 +1,100 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url('https://kprcas.ac.in/file/wp-content/uploads/2024/12/kprcas-1052x468.jpg') no-repeat center center/cover;
+    text-align: center;
+}
+
+/* Main Container */
+.container {
+    background: rgba(255, 255, 255, 0.1); /* Even more transparent */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    backdrop-filter: blur(15px); /* Stronger glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border for visibility */
+}
+
+/* Title and Description */
+h1 {
+    font-size: 26px;
+    color: #fff; /* White text for contrast */
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    color: #fff; /* White text for better visibility */
+}
+
+/* Login Button */
+.login-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: rgba(0, 123, 255, 0.8); /* Slight transparency */
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.login-btn:hover {
+    background: rgba(0, 86, 179, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        background-size: cover;
+        background-position: top;
+    }
+
+    .container {
+        width: 90%;
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .login-btn {
+        font-size: 16px;
+        padding: 10px 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 13px;
+    }
+
+    .login-btn {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+}

@@ -1,0 +1,166 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Container */
+.container {
+    width: 50%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #ddd;
+}
+
+/* Page Header */
+h2 {
+    text-align: center;
+    color: #007BFF;
+}
+
+/* Button Container */
+.button-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.button-container button {
+    padding: 12px 18px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.button-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Profile Section */
+.profile-container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px #ddd;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.profile-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.profile-info {
+    flex-grow: 1;
+}
+
+.logout-btn {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Success & Error Messages */
+.success {
+    color: green;
+    font-weight: bold;
+    text-align: center;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form textarea, form select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+}
+
+form button {
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .profile-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-icon {
+        margin-bottom: 10px;
+    }
+
+    .button-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .button-container button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

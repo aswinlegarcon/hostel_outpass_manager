@@ -1,0 +1,160 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Background Styling */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://kprcas.ac.in/file/wp-content/uploads/2024/12/kprcas-1052x468.jpg') no-repeat center center/cover;
+}
+
+/* Title Styling */
+h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 35px;
+    text-align: center;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Login Box - Keep as Previous */
+.container.login {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 40px;
+    border-radius: 15px;
+    width: 400px;
+    text-align: center;
+    backdrop-filter: blur(12px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.35);
+}
+
+/* Signup Box - More Compact */
+.container.signup {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px; /* Reduced padding */
+    border-radius: 25px; /* More rounded */
+    width: 350px; /* More compact */
+    text-align: center;
+    backdrop-filter: blur(12px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.35);
+}
+
+/* Heading */
+h2 {
+    color: #ffffff;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    color: #333;
+    font-size: 16px;
+}
+
+/* Remove Glow Effect */
+input:focus, select:focus {
+    background: rgba(255, 255, 255, 1);
+}
+
+/* Buttons - Smaller than Input Fields */
+button {
+    width: 75%;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    transform: scale(1.05);
+}
+
+/* Login/Signup Switch Buttons */
+.switch-container {
+    margin-top: 20px;
+}
+
+.switch-btn {
+    display: inline-block;
+    width: 75%;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.25);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.switch-btn:hover {
+    background: rgba(255, 255, 255, 0.35);
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .container.login {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .container.signup {
+        width: 85%;
+        padding: 25px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    input, select {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    button {
+        width: 80%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .switch-btn {
+        width: 80%;
+        padding: 10px;
+        font-size: 12px;
+    }
+}
