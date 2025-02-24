@@ -13,8 +13,13 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url('https://kprcas.ac.in/file/wp-content/uploads/2024/12/kprcas-1052x468.jpg') no-repeat center center/cover;
+   
+    
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                    url('https://kprcas.ac.in/file/wp-content/uploads/2024/12/kprcas-1052x468.jpg') 
+                    no-repeat center center/cover;
 }
+
 
 /* Title Styling */
 h1 {

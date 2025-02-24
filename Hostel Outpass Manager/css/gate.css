@@ -6,37 +6,62 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Container */
+/* Profile Section (Common for Warden, Teacher & Gate) */
+.profile-container {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: #007BFF;
+    color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.profile-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    padding: 5px;
+}
+
+.profile-info {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.logout-btn {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background: #dc3545;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.logout-btn:hover {
+    background: #c82333;
+}
+
+/* Main Content */
 .container {
-    width: 60%;
+    width: 80%;
+    max-width: 1200px;
     margin: auto;
     background: white;
     padding: 20px;
-    margin-top: 20px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px #ddd;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Page Header */
-h2 {
-    text-align: center;
-    color: #007BFF;
-}
-
-/* Success & Error Messages */
-.success {
-    color: green;
-    font-weight: bold;
-    text-align: center;
-}
-
-.error {
-    color: red;
-    font-weight: bold;
-    text-align: center;
-}
-
-/* Table Styling */
+/* Table */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -45,8 +70,9 @@ table {
 
 th, td {
     border: 1px solid #ddd;
-    padding: 10px;
+    padding: 12px;
     text-align: center;
+    font-size: 16px;
 }
 
 th {
@@ -54,114 +80,119 @@ th {
     color: white;
 }
 
-/* Scan Button */
-.scan-btn {
-    padding: 8px 12px;
-    border: none;
-    border-radius: 5px;
-    background-color: #28a745;
-    color: white;
-    cursor: pointer;
-    font-size: 14px;
+td {
+    background-color: #f9f9f9;
 }
 
-.scan-btn:hover {
+/* Buttons inside Action Column */
+.action-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.approve-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.reject-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.approve-btn:hover {
     background-color: #218838;
 }
 
-/* Profile Section */
-.profile-container {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0px 0px 10px #ddd;
-    margin-bottom: 20px;
+.reject-btn:hover {
+    background-color: #c82333;
 }
 
-.profile-icon {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    margin-right: 15px;
-}
-
-.profile-info {
-    flex-grow: 1;
-}
-
-.logout-btn {
-    text-decoration: none;
-    color: red;
-    font-weight: bold;
-}
-
-/* Media Queries for Responsiveness */
+/* Responsive Table */
 @media (max-width: 768px) {
-    /* Adjust container width for smaller screens */
+    body {
+        background-color: #007BFF;
+    }
     .container {
-        width: 90%;
+        width: 95%;
         padding: 15px;
     }
 
-    /* Make profile section stack on top for smaller screens */
+    th, td {
+        font-size: 14px;
+        padding: 10px;
+    }
+
     .profile-container {
         flex-direction: column;
+        align-items: center;
         text-align: center;
     }
 
-    .profile-icon {
-        margin-bottom: 10px;
+    .profile-info {
+        margin-left: 0;
+        margin-top: 10px;
     }
 
-    /* Adjust table styling for smaller screens */
-    table {
-        font-size: 12px;
-    }
-
-    th, td {
-        padding: 8px;
-    }
-
-    /* Adjust button size for mobile */
-    .scan-btn {
+    .logout-btn {
         padding: 6px 10px;
+        font-size: 12px;
+        position: static;
+        transform: none;
+        margin-top: 5px;
+    }
+    
+    .approve-btn, .reject-btn {
+        padding: 6px;
         font-size: 12px;
     }
 }
 
 @media (max-width: 480px) {
-    /* Further adjustments for very small screens */
-    h2 {
-        font-size: 18px;
+    body {
+        background-color: #007BFF;
     }
-
     .container {
-        width: 100%;
+        width: 98%;
         padding: 10px;
     }
 
-    .scan-btn {
-        width: 100%;
-        font-size: 14px;
-        padding: 12px;
-    }
-
-    /* Adjust profile info for mobile */
-    .profile-container {
-        padding: 15px;
-    }
-
-    .profile-info {
-        text-align: center;
-    }
-
-    /* Adjust table font size for very small screens */
     table {
-        font-size: 10px;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
     }
 
-    th, td {
+    button {
+        font-size: 12px;
         padding: 6px;
+    }
+
+    .profile-container {
+        padding: 10px;
+    }
+
+    .profile-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logout-btn {
+        font-size: 10px;
+        padding: 5px 8px;
+    }
+    
+    .approve-btn, .reject-btn {
+        font-size: 10px;
+        padding: 5px;
     }
 }

@@ -16,6 +16,7 @@ body {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 10px;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .profile-icon {
@@ -38,6 +39,9 @@ body {
     background: #dc3545;
     padding: 8px 12px;
     border-radius: 5px;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
 }
 
 .logout-btn:hover {
@@ -80,7 +84,13 @@ td {
     background-color: #f9f9f9;
 }
 
-/* Buttons */
+/* Buttons inside Action Column */
+.action-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
 button {
     padding: 8px;
     border: none;
@@ -134,6 +144,11 @@ button {
         padding: 6px 10px;
         font-size: 12px;
     }
+    
+    .approve-btn, .reject-btn {
+        padding: 6px;
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -165,5 +180,10 @@ button {
     .logout-btn {
         font-size: 10px;
         padding: 5px 8px;
+    }
+    
+    .approve-btn, .reject-btn {
+        font-size: 10px;
+        padding: 5px;
     }
 }

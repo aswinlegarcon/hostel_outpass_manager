@@ -10,7 +10,6 @@ session_start();
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
     $password = $_POST['password'];
-
     $sql = "SELECT * FROM users WHERE email = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("s", $email);
@@ -24,6 +23,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['role'] = $user['role'];
         $_SESSION['department'] = $user['department'];
         $_SESSION['email'] = $user['email'];
+               // Store additional details for students
+               if ($user['role'] == 'student') {
+                $_SESSION['roll_no'] = $user['roll_no'];
+                $_SESSION['room_no'] = $user['room_no'];
+                $_SESSION['year_of_study'] = $user['year_of_study'];
+                $_SESSION['hostel_name'] = $user['hostel_name'];
+            }
+
 
         // Redirect based on role
         switch ($user['role']) {
@@ -65,9 +72,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <button type="submit">Login</button>
         </form>
         
-        <div class="switch-container">
+        <!-- <div class="switch-container">
             <a href="signup.php" class="switch-btn">Don't have an account? Sign up</a>
-        </div>
+        </div> -->
     </div>
 
 </body>
