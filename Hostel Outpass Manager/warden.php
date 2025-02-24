@@ -86,7 +86,7 @@ $history_result = $history_stmt->get_result();
     <script type="text/javascript">
         // Initialize EmailJS
         (function() {
-            emailjs.init("BylsfVs_890Bfmuu3");
+            emailjs.init("YOUR_PUBLIC_KEY");
         })();
         
         function sendStatusEmail(studentName, studentEmail, status, reason, leaveDate, returnDate, wardenComment) {
@@ -103,7 +103,7 @@ $history_result = $history_stmt->get_result();
 
             document.getElementById('loadingOverlay').style.display = 'flex';
 
-            return emailjs.send('service_3zsxckq', 'template_ph3ytu8', templateParams)
+            return emailjs.send('YOUR_SEVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
                 .then(function(response) {
                     console.log('SUCCESS!', response.status, response.text);
                     document.getElementById('loadingOverlay').style.display = 'none';
@@ -124,7 +124,7 @@ $history_result = $history_stmt->get_result();
             }
 
             const studentName = form.getAttribute('data-student-name');
-            const studentEmail = '23bai007@kprcas.ac.in';
+            const studentEmail = 'Example mail';
             const reason = form.getAttribute('data-reason');
             const leaveDate = form.getAttribute('data-leave-date');
             const returnDate = form.getAttribute('data-return-date');

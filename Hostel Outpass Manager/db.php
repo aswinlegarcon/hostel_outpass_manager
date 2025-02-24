@@ -1,8 +1,8 @@
 <?php
-$host = "mysql.selfmade.ninja";
-$user = "aswinlegarcon1";
-$pass = "12345678";
-$dbname = "aswinlegarcon1_outpass_system";
+$host = ""; // your hostname
+$user = ""; // your username
+$pass = ""; // your password
+$dbname = ""; // your dbname
 date_default_timezone_set('Asia/Kolkata');
 
 $conn = new mysqli($host, $user, $pass, $dbname);

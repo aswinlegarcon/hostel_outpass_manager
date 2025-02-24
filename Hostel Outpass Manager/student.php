@@ -116,7 +116,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && !$pending_request) {
     <script type="text/javascript">
     // Initialize EmailJS
     (function() {
-        emailjs.init("BylsfVs_890Bfmuu3");
+        emailjs.init("YOUR_PUBLIC_KEY");
     })();
 
     function validateOutpassRequest(event) {
@@ -152,7 +152,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && !$pending_request) {
         // Get student details
         const studentName = '<?php echo addslashes($name); ?>';
         const studentEmail = '<?php echo addslashes($email); ?>';
-        const teacherEmail = '23bai007@kprcas.ac.in';
+        const teacherEmail = 'Example mail';
 
         // Prepare email parameters
         const templateParams = {
@@ -173,7 +173,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && !$pending_request) {
         submitButton.disabled = true;
 
         // Send email
-        emailjs.send('service_3zsxckq', 'template_ph3ytu8', templateParams)
+        emailjs.send('YOUR_SEVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
             .then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
                 form.submit(); // Submit the form to process PHP side
